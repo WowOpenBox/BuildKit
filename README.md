@@ -8,9 +8,17 @@ Source of info and data:
 
 http://kitcreator.rkeene.org/fossil/home
 
-URL: http://kitcreator.rkeene.org/kits/793723ccd332ea6e5634d92feb7818319e2b5545/tclkit.exe
-Description: Tcl 8.6.10, KitCreator 0.12.0, Platform win64, Unthreaded, Packages: mk4tcl, tk
-(need to pick MetaKit or you get a vfs error later)
+Need to pick MetaKit or you get a vfs error later
+Need the runtime to be threaded
+
+For the runtime: (runtime.exe)
+
+URL: http://kitcreator.rkeene.org/kits/building/7dd39658b1f9a7ebf35ca10ca66f0a5630e049dc/
+Description: Tcl 8.6.10, KitCreator 0.12.0, Platform win64, Threaded, Packages: mk4tcl, tk
+
+For build time: same without Tk: (tclkit/tclkit.exe)
+URL: http://kitcreator.rkeene.org/kits/8ab68b842c29538075259d620218331cae45e995/
+Description: Tcl 8.6.10, KitCreator 0.12.0, Platform win64, Without Tcl pkgs/ and all encodings, Unthreaded, Packages: mk4tcl
 
 https://www.magicsplat.com/blog/starpack-example/
 

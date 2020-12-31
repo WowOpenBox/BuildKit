@@ -29,3 +29,9 @@ sdx kit : https://chiselapp.com/user/aspect/repository/sdx/uv/sdx-20110317.kit
 tooltip is from tklib https://core.tcl-lang.org/tklib/wiki?name=Releases
 
 tkdnd is from https://github.com/petasis/tkdnd/releases
+
+
+Manually added our ico to runtime.exe as sdx seems unable to otherwise replace them all
+
+
+upx is from https://github.com/upx/upx/releases/tag/v3.96

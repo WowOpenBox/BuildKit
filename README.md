@@ -25,3 +25,7 @@ https://www.magicsplat.com/blog/starpack-example/
 twapi bin https://sourceforge.net/projects/twapi/files/Current%20Releases/Tcl%20Windows%20API/twapi-4.5.2/twapi-bin-4.5.2.zip/download
 
 sdx kit : https://chiselapp.com/user/aspect/repository/sdx/uv/sdx-20110317.kit
+
+tooltip is from tklib https://core.tcl-lang.org/tklib/wiki?name=Releases
+
+tkdnd is from https://github.com/petasis/tkdnd/releases

@@ -7,8 +7,10 @@ Note that the license of each component is their own
 Source of info and data:
 
 http://kitcreator.rkeene.org/fossil/home
-Description: Tcl 8.6.10, KitCreator 0.12.0, Platform win64, Unthreaded, Packages: tk
-URL: http://kitcreator.rkeene.org/kits/4a72d249fde19fb08b68cc93c970c4705b98faa7/tclkit.exe
+
+URL: http://kitcreator.rkeene.org/kits/793723ccd332ea6e5634d92feb7818319e2b5545/tclkit.exe
+Description: Tcl 8.6.10, KitCreator 0.12.0, Platform win64, Unthreaded, Packages: mk4tcl, tk
+(need to pick MetaKit or you get a vfs error later)
 
 https://www.magicsplat.com/blog/starpack-example/
 

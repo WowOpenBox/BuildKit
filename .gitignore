@@ -1,4 +1,4 @@
 OpenMultiBoxing.exe
-OpenMultiBoxing.vfs/app
-wowopenboxSettings.tcl
+OpenMultiBoxing.vfs/app/*.tkapp
+wowopenboxSettings*.tcl
 WowOpenBox.tkapp

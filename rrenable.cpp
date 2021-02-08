@@ -33,7 +33,7 @@ void EnterDebugLoop(const LPDEBUG_EVENT DebugEv)
 //int _tmain(int argc, TCHAR* argv[])
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) 
 {
-    const char* cmd1 = "OpenMultiBoxing-X.Y.Z.exe -rr       "; // X.Y.Z changed at CI time (note: doesn't work for .10. etc)
+    const char* cmd1 = "OpenMultiBoxing-vX.Y.Z.exe -rr       "; // vX.Y.Z changed at CI time (note: doesn't work for .10. etc)
     wchar_t* cmd = (wchar_t*)calloc(MAX_CMD, sizeof(wchar_t));
     if (!cmd) {
         printf("Unable to allocate %d array of wide char!\n", MAX_CMD);

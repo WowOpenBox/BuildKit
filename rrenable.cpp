@@ -28,9 +28,23 @@ void EnterDebugLoop(const LPDEBUG_EVENT DebugEv)
     }
 }
 
+#define MAX_CMD 256
 
-int _tmain(int argc, TCHAR* argv[])
+//int _tmain(int argc, TCHAR* argv[])
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) 
 {
+    const char* cmd1 = "OpenMultiBoxing.exe -debug                                   "; //extra length for patching version number in CI
+    wchar_t* cmd = (wchar_t*)calloc(MAX_CMD, sizeof(wchar_t));
+    if (!cmd) {
+        printf("Unable to allocate %d array of wide char!\n", MAX_CMD);
+        return -1;
+    }
+    for (size_t i = 0; i <= strlen(cmd1); i++) {
+        cmd[i] = cmd1[i];
+    }
+    printf("Running: %ls\n", cmd);
+
+
     STARTUPINFO si;
     PROCESS_INFORMATION pi;
 
@@ -38,15 +52,9 @@ int _tmain(int argc, TCHAR* argv[])
     si.cb = sizeof(si);
     ZeroMemory(&pi, sizeof(pi));
 
-    if (argc != 2)
-    {
-        printf("Usage: %ls cmdline\n", argv[0]);
-        return 1;
-    }
-
     // Start the child process. 
-    if (!CreateProcess(NULL,   // No module name (use command line)
-        argv[1],        // Command line
+    if (!CreateProcessW(NULL,   // No module name (use command line)
+        cmd,        // Command line
         NULL,           // Process handle not inheritable
         NULL,           // Thread handle not inheritable
         FALSE,
@@ -71,4 +79,3 @@ int _tmain(int argc, TCHAR* argv[])
     CloseHandle(pi.hThread);
     return 0;
 }
-

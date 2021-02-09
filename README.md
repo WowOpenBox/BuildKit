@@ -37,4 +37,4 @@ Manually added our ico to runtime.exe as sdx seems unable to otherwise replace t
 upx is from https://github.com/upx/upx/releases/tag/v3.96
 
 
-rrenable is a small program to start OpenMultiBoxing.exe as a child program in debug mode (which allows that child to set window focus)
+OpenMultiBoxing_RR is a small program to start OpenMultiBoxing.exe as a child program in debug mode (which allows that child to set window focus)

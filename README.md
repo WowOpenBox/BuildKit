@@ -1,5 +1,5 @@
 # BuildKit
-Dependencies to build WOB/OBM binaries, ie a single binary with Tcl/Tk+TWAPI+misc dependencies
+Dependencies to build [WOB/OBM](https://github.com/WowOpenBox/WowOpenBox#wowopenbox) binaries, ie a single binary with Tcl/Tk+TWAPI+misc dependencies
 
 
 Note that the license of each component is their own

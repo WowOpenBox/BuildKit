@@ -2,6 +2,8 @@
 // so it can send focus commands.
 // (ie it launches child process with debugger mode)
 // (c) 2021 MooreaTv <moorea@ymail.com>
+// GPLv3 License
+// Can't be used in commercial products. NO WARRANTY.
 
 #include <windows.h>
 #include <stdio.h>
@@ -34,17 +36,21 @@ void EnterDebugLoop(const LPDEBUG_EVENT DebugEv)
 //int _tmain(int argc, TCHAR* argv[])
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
 {
-    const char* cmd1 = "OpenMultiBoxing-vX.Y.Z.exe -rr       "; // vX.Y.Z changed at CI time (note: doesn't work for .10. etc)
+    const char* cmd1 = "OpenMultiBoxing-vX.Y.Z.exe -rr"; // vX.Y.Z changed at CI time (note: doesn't work for .10. etc)
     wchar_t* cmd = (wchar_t*)calloc(MAX_CMD, sizeof(wchar_t));
     if (!cmd) {
         printf("Unable to allocate %d array of wide char!\n", MAX_CMD);
         return -1;
     }
-    for (size_t i = 0; i <= strlen(cmd1); i++) {
+    size_t i = 0;
+    for (; i < strlen(cmd1); i++) {
         cmd[i] = cmd1[i];
     }
-    printf("Running: %ls\n", cmd);
-
+    cmd[i++] = ' ';
+    for (size_t j= 0; j <= wcslen(pCmdLine); j++) {
+        cmd[i + j] = pCmdLine[j];
+    }
+    //printf("Running: %ls\n", cmd);
 
     STARTUPINFOW si;
     PROCESS_INFORMATION pi;

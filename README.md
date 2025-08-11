@@ -33,3 +33,5 @@ tkdnd is from https://github.com/petasis/tkdnd/releases
 
 
 Manually added our ico to runtime.exe as sdx seems unable to otherwise replace them all
+
+We also unwrap and rewrapped runtime.exe to mt.exe add the app.manifest for high DPI settings

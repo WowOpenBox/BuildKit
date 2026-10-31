@@ -9,6 +9,22 @@ Source of info and data:
 
 http://kitcreator.rkeene.org/fossil/home
 
+## Signable build: runtime-zip.exe + build.ps1
+
+`build.ps1 -Out WOB2027-vX.Y.Z.exe -Version vX.Y.Z` (with the .tkapp already in `OpenMultiBoxing.vfs/app`) makes the
+exe from [runtime-zip.exe](runtime-zip.exe): sets our icon, [app.manifest](app.manifest) (high DPI) and version info
+(from `OpenMultiBoxing.vfs/tclkit.inf`), and appends one zip with the kit's files and the vfs. No sdx/mt.exe.
+
+Unlike the Metakit runtime.exe below, that exe still works once Authenticode signed (the signature goes after the
+VFS, at the end of the file). build.ps1 also fixes a tclvfs `zip::EndOfArchive` bug in the kit's boot code, without
+which a signed kit can't find its files (offsets 28 bytes off when the zip end isn't in the last 512 bytes).
+
+runtime-zip.exe: http://kitcreator.rkeene.org/kits/e496d9f89daf0e525e30324eed52774652d7c167/tclkit.exe
+Description: Tcl 8.6.10, KitCreator 0.12.0, Platform win64, Zip-kit, Threaded, Packages: tk
+(http://kitcreator.rkeene.org/kitcreator: those options and Kit Storage: Zip)
+
+## Metakit runtime (sdx wrap, can't be signed)
+
 Need to pick MetaKit or you get a vfs error later
 Need the runtime to be threaded
 

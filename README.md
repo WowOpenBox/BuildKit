@@ -9,6 +9,15 @@ Source of info and data:
 
 http://kitcreator.rkeene.org/fossil/home
 
+## Tcl/Tk 9: runtime9.exe
+
+`build.ps1` defaults to [runtime9.exe](runtime9.exe) and [app9.manifest](app9.manifest): a static Tcl/Tk 9.1.0 wish
+built by [OpenMultiBoxing/BuildKit](https://github.com/OpenMultiBoxing/BuildKit)'s `runtime9.yml` workflow (static C
+runtime: only Windows' own DLLs needed), with the Tcl/Tk libraries in its zip. Tcl 9's zipfs mounts the exe's zip at
+`//zipfs:/app` and runs its `main.tcl` (no tclkit/starkit/tclvfs). `OpenMultiBoxing.vfs/lib` has the Tcl 9 packages
+from that same build: twapi 5.2.0 and cffi 2.0.3 (built against Tcl 9.0.4, stubs), tooltip 2.0.2 from tklib 0.9. No
+tkdnd (unused).
+
 ## Signable build: runtime-zip.exe + build.ps1
 
 `build.ps1 -Out WOB2027-vX.Y.Z.exe -Version vX.Y.Z` (with the .tkapp already in `OpenMultiBoxing.vfs/app`) makes the

@@ -16,7 +16,7 @@ built by [OpenMultiBoxing/BuildKit](https://github.com/OpenMultiBoxing/BuildKit)
 runtime: only Windows' own DLLs needed), with the Tcl/Tk libraries in its zip. Tcl 9's zipfs mounts the exe's zip at
 `//zipfs:/app` and runs its `main.tcl` (no tclkit/starkit/tclvfs). `OpenMultiBoxing.vfs/lib` has the Tcl 9 packages
 from that same build: twapi 5.2.0 and cffi 2.0.3 (built against Tcl 9.0.4, stubs), tooltip 2.0.2 from tklib 0.9. No
-tkdnd (unused).
+tkdnd (unused). To update them, see that repo's README: copy the same new files here too.
 
 ## Signable build: runtime-zip.exe + build.ps1
 

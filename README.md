@@ -1,4 +1,8 @@
 # BuildKit
+
+**This is now handled the same for WOB and OMB so this repo is now unused since we switch to Tcl/Tk 9(.1) from 8.6.
+Shared build is now [github.com/OpenMultiBoxing/BuildKit](https://github.com/OpenMultiBoxing/BuildKit)**
+
 Dependencies to build [WOB/OBM](https://github.com/WowOpenBox/WowOpenBox#wowopenbox) binaries, ie a single binary with Tcl/Tk+TWAPI+misc dependencies
 
 [OpenMultiBoxing_RR](OpenMultiBoxing_RR/) is a small program to start OpenMultiBoxing.exe as a child program in debug mode (which allows that child to set window focus)
